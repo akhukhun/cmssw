@@ -33,6 +33,7 @@ class LutXml : public XMLDOMBlock
   {
     _Config();
     int ieta, iphi, depth, crate, slot, topbottom, fiber, fiberchan, lut_type;
+    std::string infotype;
     std::string creationtag;
     std::string creationstamp;
     std::string formatrevision;

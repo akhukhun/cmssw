@@ -40,6 +40,7 @@ LutXml::Config::_Config()
   fiber = -1;
   fiberchan = -1;
   lut_type = -1;
+  infotype = "LUT";
   creationtag = "default_tag";
 
   char timebuf[50];
@@ -101,6 +102,7 @@ void LutXml::addLut( LutXml::Config & _config, XMLDOMBlock * checksums_xml )
     brickElem = document->createElement( XMLProcessor::_toXMLCh("CFGBrick") );
     rootElem->appendChild(brickElem);
 
+    addParameter( "INFOTYPE", "string", _config.infotype );
     addParameter( "CREATIONTAG", "string", _config.creationtag );
     addParameter( "CREATIONSTAMP", "string", _config.creationstamp );
     addParameter( "FORMATREVISION", "string", _config.formatrevision );
